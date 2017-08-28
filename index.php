@@ -10,14 +10,14 @@ date_default_timezone_set('Europe/Moscow');
 // записать в эту переменную оставшееся время в этом формате (ЧЧ:ММ)
 $lot_time_remaining = "00:00";
 
-// временная метка для полночи следующего дня
+// временная метка для полуночи следующего дня
 $tomorrow = strtotime('tomorrow midnight');
 
 // временная метка для настоящего времени
 $now = strtotime('now');
 
-// далее нужно вычислить оставшееся время до начала следующих суток и записать его в переменную $lot_time_remaining
-// ...
+// оставшееся время до начала следующих суток
+$lot_time_remaining = gmdate("H:i" , $tomorrow - $now);
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -44,7 +44,23 @@ $now = strtotime('now');
         <nav class="user-menu">
 
         <!-- здесь должен быть PHP код для показа аватара пользователя -->
-
+		<?php if ($is_auth == "true"): ?> 
+			<div class="user-menu__image">
+				<img src="<?=$user_avatar; ?>" width="40" height="40" alt="Пользователь">
+			</div>
+			<div class="user-menu__logged">
+				<p><?=$user_name; ?></p>
+			</div>
+		<?php else: ?> 
+			<ul class="user-menu__list">
+				<li class="user-menu__item">
+					<a href="#">Регистрация</a>
+				</li>
+				<li class="user-menu__item">
+					<a href="#">Вход</a>
+				</li>
+			</ul>
+		<?php endif; ?>
         </nav>
     </div>
 </header>
