@@ -1,7 +1,7 @@
 # Личный проект «YetiCave» 
 
 * Студент: [Ульяна Ревякина](https://up.htmlacademy.ru/php/2/user/180245).
-* Наставник: `Неизвестно`.
+* Наставник: `Денис Байдаров`(https://htmlacademy.ru/profile/4er).
 
 ---
 
