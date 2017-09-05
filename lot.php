@@ -130,7 +130,7 @@ function bettime_passed ($time_stamp) {
                         <tr class="history__item">
                             <td class="history__name"><?=$bet_item['name']; ?><!-- имя автора--></td>
                             <td class="history__price"><?=$bet_item['price']; ?><!-- цена--> р</td>
-                            <td class="history__time"><?php print(bettime_passed($bet_item['ts'])); ?><!-- дата в человеческом формате--></td>
+                            <td class="history__time"><?=bettime_passed($bet_item['ts']); ?><!-- дата в человеческом формате--></td>
                         </tr>
 					<?php endforeach; ?>
                     </table>
